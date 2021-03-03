@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pexeso</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <link rel="stylesheet" href="/css/stylesheet.css"/>
+    <script src="/js/pexeso.js"></script>
+
+
+</head>
+<body>
+
+<h1>Welcome to <a href="/">Gamestudio</a>!</h1>
+<h1>PEXESO</h1>
+
+<a href="/pexeso/new">New game</a><br/>
+
+
+<div th:text="${@pexesoController.gameState}"/>
+<div th:utext="${@pexesoController.htmlField}"/>
+
+
+
+<div class="win" th:if="${@pexesoController.gameWon==true}">
+    YOU WON &nbsp;  <span th:text="${@userController.loggedUser}"/>
+
+</div>
+
+<br>
+<br>
+
+<div class="serviceTables">
+    <h2>Scores</h2>
+    <ol>
+        <li th:each="score : ${scores}">
+            <span th:text="${score.player}"/>
+            <span th:text="${score.points}"/>
+        </li>
+    </ol>
+    <h2>Comments</h2>
+    <ol>
+        <li th:each="comment :${comments}">
+            <span th:text="${comment.player}"/>
+            <span th:text="${comment.comment}"/>
+            <span th:text="${comment.commentedOn}"/>
+        </li>
+    </ol>
+    <h2>Average Rating</h2>
+    <ol>
+        <span th:text="${rating}"/>
+    </ol>
+</div>
+
+<br>
+<br>
+
+<div class="managing">
+    <div th:if="${@userController.logged}">
+    <div class="comment" th:if="${@userController.logged}">
+
+        <form method="get" action="/pexeso/comment">
+            <label >
+            Comment
+                <textarea name="comment" id="text"></textarea>
+            </label>
+            <input type="submit" value="SUBMIT" onclick="Addopt_l(event)"/>
+
+            <input type="reset" value="DELETE"/>
+        </form>
+    </div>
+
+<br>
+    <br>
+
+    <div class="rating" th:if="${@userController.logged != null}">
+        <form method="get" action="/pexeso/rating">
+            <div class="rate">
+
+                <input type="radio" id="star5" name="rating" value="5" checked />
+
+                <label for="star5" title="text">5 stars</label>
+
+                <input type="radio" id="star4" name="rating" value="4" />
+
+                <label for="star4" title="text">4 stars</label>
+
+                <input type="radio" id="star3" name="rating" value="3" />
+
+                <label for="star3" title="text">3 stars</label>
+
+                <input type="radio" id="star2" name="rating" value="2" />
+
+                <label for="star2" title="text">2 stars</label>
+
+                <input type="radio" id="star1" name="rating" value="1" />
+
+                <label for="star1" title="text">1 star</label>
+
+            </div>
+            <br>
+
+            <input type="submit" value="SUBMIT" />
+
+        </form>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

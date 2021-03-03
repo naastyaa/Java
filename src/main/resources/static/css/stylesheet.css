@@ -1,0 +1,155 @@
+/**
+ * Copyright (c) 2014 Oracle and/or its affiliates. All rights reserved.
+ *
+ * You may not modify, use, reproduce, or distribute this software except in
+ * compliance with  the terms of the License at:
+ * http://java.net/projects/javaeetutorial/pages/BerkeleyLicense
+ */
+
+#top {
+    position: relative;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+body {
+    background: url(https://vignette.wikia.nocookie.net/gameofthrones/images/e/e9/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8C_%D0%9D%D0%BE%D1%87%D0%B8_%D0%BD%D0%B0_%D0%B1%D0%B5%D1%80%D0%B5%D0%B3%D1%83_5x08.jpg/revision/latest?cb=20180209160343&path-prefix=ru) no-repeat center center fixed;
+    background-size: cover;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Helvetica CE", sans-serif;
+    color: white;
+    margin: 10px;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Helvetica CE", sans-serif;
+    font-size:  28px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #045491;
+}
+.header {
+    padding: 20px;
+    min-height: 80px;
+    margin-bottom: 30px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: Arial, "Arial CE", "Helvetica CE", sans-serif;
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #045491;
+}
+
+a:link, a:visited {
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
+}
+
+.center_content {
+    position: relative;
+    background-color: #e0e0e0;
+    padding: 5px;
+}
+
+.error-message {
+    color: #d20005;
+    font-family: 'New Century Schoolbook', serif;
+    font-style: oblique;
+    text-decoration: overline;
+}
+
+.list-background {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12pt;
+    padding: 10px;
+    width: 100%;
+}
+
+.list-caption {
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.list-column-center {
+    text-align: center;
+    width: 15%;
+}
+
+.list-column-left {
+    text-align: left;
+    width: 70%;
+}
+
+.list-column-right {
+    text-align: right;
+    width: 15%;
+}
+
+.list-footer {
+    background-color: #A5A5A5;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-header {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+.list-row-even {
+}
+
+.list-row-odd {
+    background-color: #eaf1f8;
+}
+
+.special-offer {
+    font-family: sans-serif;
+    font-size: 12pt;
+    text-align: left;
+    padding: 10px;
+}
+
+table {
+width: 300px; /* Ширина таблицы */
+    border: 1px solid blue; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+
+}
+img { width: 300px; height: 250px;}
+
+td {
+    padding: 0;
+}
+.win{
+    display: flex;
+    font-family: Arial, "Arial CE", "Helvetica CE", sans-serif;
+    font-size: large;
+    justify-content: center;
+    margin: auto;
+}
+.rate{
+margin: auto;
+}
+
